@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <title>Message List</title>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="main" class="card">
+          <div class="card-content">
+            <span class="card-title">Message Go!</span>
+            <div class="row">
+              <form id="task-form">
+                <div class="input-field col s12">
+                  <input type="text" name="task" id="task" value="Enter message here">
+                  <label for="task">New Message</label>
+                </div>
+                
+            </div>
+            <input type="submit" value="Send" class="btn">
+            </form>
+          </div>
+          <div class="card-action">
+            <h5 id="task-title">Messages</h5>
+            Last Message : <message></message>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript">
+  var fbConfig = {apiKey: "AIzaSyBRijfqO_Te-uNNA2f0ujuoHOIKN_mlF00",
+    authDomain: "chat-app-eil.firebaseapp.com",
+    databaseURL: "https://chat-app-eil.firebaseio.com",
+    projectId: "chat-app-eil",
+    storageBucket: "chat-app-eil.appspot.com",
+    messagingSenderId: "718540177328",
+    appId: "1:718540177328:web:079e4a982796de27"};
+
+    firebase.initializeApp(fbConfig);
+  var msg = document.querySelector('message');
+  var myRef = firebase.database().ref();
+  myRef.on("value", function(snapshot) {
+    data = snapshot.val().message;
+    msg.innerHTML = data;
+ }, function (error) {
+    console.log("Error: " + error.code);
+ });
+  </script>
+  <script>
+    const form = document.querySelector('form');
+    const textInput = document.getElementById('task');
+
+    textInput.value = '';
+
+    form.addEventListener('submit', runEvent);
+
+    function runEvent(e){
+      let string = textInput.value;
+      var ref= firebase.database().ref();
+      ref.update({message: string});
+      console.log(string)
+      e.preventDefault();
+    }
+  </script>
+  <!-- <script src="app.js"></script> -->
+</body>
+
+</html>
