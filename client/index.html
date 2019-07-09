@@ -565,5 +565,29 @@
     <script src="scripts/extras.1.1.0.min.js"></script>
     <script src="scripts/shards-dashboards.1.1.0.min.js"></script>
     <script src="scripts/app/app-blog-overview.1.1.0.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <!-- <script src="scripts/firebase.js"></script> -->
+    <script>
+      var firebaseConfig = {
+          apiKey: "AIzaSyBIIZCuo09f5GO9llEobSHFmhrjzF9G0Eo",
+          authDomain: "wasdpollutecheck.firebaseapp.com",
+          databaseURL: "https://wasdpollutecheck.firebaseio.com",
+          projectId: "wasdpollutecheck",
+          storageBucket: "wasdpollutecheck.appspot.com",
+          messagingSenderId: "755507818839",
+          appId: "1:755507818839:web:8d3f6a7d5f2c29f8"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      console.log('BLA');
+      var ref = firebase.database().ref();
+      ref.on("value", function(snapshot) {
+          console.log(snapshot.val());
+      }, function (error) {
+          console.log("Error: " + error.code);
+      });
+    </script>
   </body>
 </html>
