@@ -317,95 +317,193 @@
                 </div>
               </div>
             </div>
-            <!-- Small Stats Blocks -->
+            
+            <hr>
+            <!-- INDIVIDUAL CHARTS (WATER)) -->
             <div class="row">
-              <div class="col-lg col-md-6 col-sm-6 mb-4">
-                <div class="stats-small stats-small--1 card card-small">
-                  <div class="card-body p-0 d-flex">
-                    <div class="d-flex flex-column m-auto">
-                      <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Air Pollution (CO ppm)</span>
-                        <h6 class="stats-small__value count my-3">2,390</h6>
-                      </div>
-                      <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+              <div class="col-lg-3 col-md-12 col-sm-12">
+                <div class="row">
+                  <!-- CHART 1 - sub1 -->
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="stats-small stats-small--1 card card-small">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase">Live pH Reading</span>
+                            <h6 class="stats-small__value count my-3">5.8</h6>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                          </div>
+                        </div>
+                        <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
                       </div>
                     </div>
-                    <canvas height="120" class="blog-overview-stats-small-1"></canvas>
+                  </div>
+                  <!-- CHART 1 - sub2 -->
+                  <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 10px;">
+                    <div class="stats-small stats-small--1 card card-small">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase">Live Temperature Reading</span>
+                            <h6 class="stats-small__value count my-3">5.8</h6>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                          </div>
+                        </div>
+                        <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg col-md-6 col-sm-6 mb-4">
-                <div class="stats-small stats-small--1 card card-small">
-                  <div class="card-body p-0 d-flex">
-                    <div class="d-flex flex-column m-auto">
-                      <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Air Pollution</span>
-                        <span class="stats-small__label text-uppercase">(Smoke density)</span>
-                        <h6 class="stats-small__value count my-3">182</h6>
-                      </div>
-                      <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
-                      </div>
-                    </div>
-                    <canvas height="120" class="blog-overview-stats-small-2"></canvas>
+              
+              <!-- CHART 1 -->
+              <div class="col-lg-9 col-md-12 col-sm-12 mb-4">
+                <div class="card card-small">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Water Pollution Sensors</h6>
                   </div>
-                </div>
-              </div>
-              <div class="col-lg col-md-4 col-sm-6 mb-4">
-                <div class="stats-small stats-small--1 card card-small">
-                  <div class="card-body p-0 d-flex">
-                    <div class="d-flex flex-column m-auto">
-                      <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Water Density</span>
-                        <span class="stats-small__label text-uppercase">(Temperature)</span>
-                        <h6 class="stats-small__value count my-3">8,147</h6>
+                  <div class="card-body pt-0">
+                    <div class="row border-bottom py-2 bg-light">
+                      <div class="col-12 col-sm-6">
+                        <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
+                          <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
+                          <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
+                          <span class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="material-icons"></i>
+                            </span>
+                          </span>
+                        </div>
                       </div>
-                      <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--decrease">3.8%</span>
-                      </div>
-                    </div>
-                    <canvas height="120" class="blog-overview-stats-small-3"></canvas>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg col-md-4 col-sm-6 mb-4">
-                <div class="stats-small stats-small--1 card card-small">
-                  <div class="card-body p-0 d-flex">
-                    <div class="d-flex flex-column m-auto">
-                      <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Water Pollution (pH) </span>
-                        <h6 class="stats-small__value count my-3">2,413</h6>
-                      </div>
-                      <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                      <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
+                        <button type="button" class="btn btn-sm btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View Full Report &rarr;</button>
                       </div>
                     </div>
-                    <canvas height="120" class="blog-overview-stats-small-4"></canvas>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg col-md-4 col-sm-12 mb-4">
-                <div class="stats-small stats-small--1 card card-small">
-                  <div class="card-body p-0 d-flex">
-                    <div class="d-flex flex-column m-auto">
-                      <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Subscribers</span>
-                        <h6 class="stats-small__value count my-3">17,281</h6>
-                      </div>
-                      <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--decrease">2.4%</span>
-                      </div>
-                    </div>
-                    <canvas height="120" class="blog-overview-stats-small-5"></canvas>
+                    <canvas height="130" style="max-width: 100% !important;" class="blog-overview-users water-chart-big"></canvas>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- End Small Stats Blocks -->
+
+            <hr>
+            <!-- INDIVIDUAL CHARTS (NOISE)) -->
             <div class="row">
-              <!-- CHART 1 -->
-              <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
+              <div class="col-lg-3 col-md-12 col-sm-12">
+                <div class="row">
+                  <!-- CHART 1 - sub1 -->
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="stats-small stats-small--1 card card-small">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase">Live Loudness (dB) Reading</span>
+                            <h6 class="stats-small__value count my-3">5.8</h6>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                          </div>
+                        </div>
+                        <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- CHART 2 -->
+              <div class="col-lg-9 col-md-12 col-sm-12 mb-4">
+                <div class="card card-small">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Noise Pollution Sensors</h6>
+                  </div>
+                  <div class="card-body pt-0">
+                    <div class="row border-bottom py-2 bg-light">
+                      <div class="col-12 col-sm-6">
+                        <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
+                          <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
+                          <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
+                          <span class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="material-icons"></i>
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
+                        <button type="button" class="btn btn-sm btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View Full Report &rarr;</button>
+                      </div>
+                    </div>
+                    <canvas height="130" style="max-width: 100% !important;" class="blog-overview-users noise-chart-big"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+            <!-- INDIVIDUAL CHARTS (AIR)) -->
+            <div class="row">
+              <div class="col-lg-3 col-md-12 col-sm-12">
+                <div class="row">
+                  <!-- CHART 1 - sub1 -->
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="stats-small stats-small--1 card card-small">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase">Live CO Reading</span>
+                            <h6 class="stats-small__value count my-3">5.8</h6>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                          </div>
+                        </div>
+                        <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- CHART 1 - sub2 -->
+                  <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 10px;">
+                    <div class="stats-small stats-small--1 card card-small">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase">Live NH Reading</span>
+                            <h6 class="stats-small__value count my-3">5.8</h6>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                          </div>
+                        </div>
+                        <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- CHART 1 - sub3 -->
+                  <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 10px;">
+                    <div class="stats-small stats-small--1 card card-small">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase">Live Smoke Density Reading</span>
+                            <h6 class="stats-small__value count my-3">5.8</h6>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                          </div>
+                        </div>
+                        <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- CHART 3 -->
+              <div class="col-lg-9 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small">
                   <div class="card-header border-bottom">
                     <h6 class="m-0">Air Pollution Sensors</h6>
@@ -431,53 +529,90 @@
                   </div>
                 </div>
               </div>
-
-              <!-- CHART 2 -->
-              <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="stats-small stats-small--1 card card-small">
-                      <div class="card-body p-0 d-flex">
-                        <div class="d-flex flex-column m-auto">
-                          <div class="stats-small__data text-center">
-                            <span class="stats-small__label text-uppercase">MICS Score (CO ppm)</span>
-                            <h6 class="stats-small__value count my-3">2,390</h6>
-                          </div>
-                          <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
-                          </div>
-                        </div>
-                        <canvas height="120" class="blog-overview-stats-small-1"></canvas>
+            </div>
+            <br>
+            <div class="row">
+              <!-- CHART 3 - subsub1 -->
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="stats-small stats-small--1 card card-small">
+                  <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                      <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Live SOX Reading</span>
+                        <h6 class="stats-small__value count my-3">5.8</h6>
+                      </div>
+                      <div class="stats-small__data">
+                        <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                       </div>
                     </div>
+                    <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
                   </div>
                 </div>
               </div>
-
-              <!-- TEMP -->
-              <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
-                <div class="card card-small">
-                  <div class="card-header border-bottom">
-                    <h6 class="m-0">Users</h6>
+              <!-- CHART 3 - subsub2 -->
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="stats-small stats-small--1 card card-small">
+                  <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                      <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Live NOX Reading</span>
+                        <h6 class="stats-small__value count my-3">5.8</h6>
+                      </div>
+                      <div class="stats-small__data">
+                        <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                      </div>
+                    </div>
+                    <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
                   </div>
-                  <div class="card-body pt-0">
-                    <!-- <div class="row border-bottom py-2 bg-light">
-                      <div class="col-12 col-sm-6">
-                        <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
-                          <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
-                          <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
-                          <span class="input-group-append">
-                            <span class="input-group-text">
-                              <i class="material-icons"></i>
+                </div>
+              </div>
+              <!-- CHART 3 - subsub2 -->
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="stats-small stats-small--1 card card-small">
+                  <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                      <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Live VOC Reading</span>
+                        <h6 class="stats-small__value count my-3">5.8</h6>
+                      </div>
+                      <div class="stats-small__data">
+                        <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                      </div>
+                    </div>
+                    <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              
+            <hr>
+              <!-- TEMP -->
+              <div class="row">
+                <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
+                  <div class="card card-small">
+                    <div class="card-header border-bottom">
+                      <h6 class="m-0">Users</h6>
+                    </div>
+                    <div class="card-body pt-0">
+                      <!-- <div class="row border-bottom py-2 bg-light">
+                        <div class="col-12 col-sm-6">
+                          <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
+                            <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
+                            <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
+                            <span class="input-group-append">
+                              <span class="input-group-text">
+                                <i class="material-icons"></i>
+                              </span>
                             </span>
-                          </span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
-                        <button type="button" class="btn btn-sm btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View Full Report &rarr;</button>
-                      </div>
-                    </div> -->
-                    <canvas height="130" style="max-width: 100% !important;" class="first-chart"></canvas>
+                        <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
+                          <button type="button" class="btn btn-sm btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View Full Report &rarr;</button>
+                        </div>
+                      </div> -->
+                      <canvas height="130" style="max-width: 100% !important;" class="first-chart"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -693,6 +828,91 @@
                 </div>
               </div> -->
               <!-- End Top Referrals Component -->
+
+            <!-- Small Stats Blocks -->
+            <div class="row">
+              <div class="col-lg col-md-6 col-sm-6 mb-4">
+                <div class="stats-small stats-small--1 card card-small">
+                  <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                      <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Air Pollution (CO ppm)</span>
+                        <h6 class="stats-small__value count my-3">2,390</h6>
+                      </div>
+                      <div class="stats-small__data">
+                        <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                      </div>
+                    </div>
+                    <canvas height="120" class="blog-overview-stats-small-1"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-md-6 col-sm-6 mb-4">
+                <div class="stats-small stats-small--1 card card-small">
+                  <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                      <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Air Pollution</span>
+                        <span class="stats-small__label text-uppercase">(Smoke density)</span>
+                        <h6 class="stats-small__value count my-3">182</h6>
+                      </div>
+                      <div class="stats-small__data">
+                        <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                      </div>
+                    </div>
+                    <canvas height="120" class="blog-overview-stats-small-2"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 col-sm-6 mb-4">
+                <div class="stats-small stats-small--1 card card-small">
+                  <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                      <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Water Density</span>
+                        <span class="stats-small__label text-uppercase">(Temperature)</span>
+                        <h6 class="stats-small__value count my-3">8,147</h6>
+                      </div>
+                      <div class="stats-small__data">
+                        <span class="stats-small__percentage stats-small__percentage--decrease">3.8%</span>
+                      </div>
+                    </div>
+                    <canvas height="120" class="blog-overview-stats-small-3"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 col-sm-6 mb-4">
+                <div class="stats-small stats-small--1 card card-small">
+                  <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                      <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Water Pollution (pH) </span>
+                        <h6 class="stats-small__value count my-3">2,413</h6>
+                      </div>
+                      <div class="stats-small__data">
+                        <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                      </div>
+                    </div>
+                    <canvas height="120" class="blog-overview-stats-small-4"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 col-sm-12 mb-4">
+                <div class="stats-small stats-small--1 card card-small">
+                  <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                      <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Subscribers</span>
+                        <h6 class="stats-small__value count my-3">17,281</h6>
+                      </div>
+                      <div class="stats-small__data">
+                        <span class="stats-small__percentage stats-small__percentage--decrease">2.4%</span>
+                      </div>
+                    </div>
+                    <canvas height="120" class="blog-overview-stats-small-5"></canvas>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
