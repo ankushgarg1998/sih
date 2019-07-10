@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Shards Dashboard Lite - Free Bootstrap Admin Template – DesignRevision</title>
+    <title>Hexcode Industries | Dashboard</title>
     <meta name="description" content="A high-quality &amp; free Bootstrap admin dashboard template pack that comes with lots of templates and components.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -201,7 +201,7 @@
                             <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
                           </div>
                         </div>
-                        <canvas height="70" class="blog-overview-stats-small-1"></canvas>
+                        <canvas height="70" class="cumulative-green-score-chart"></canvas>
                       </div>
                     </div>
                   </div>
@@ -220,7 +220,7 @@
                             <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
                           </div>
                         </div>
-                        <canvas height="70" class="blog-overview-stats-small-1"></canvas>
+                        <canvas height="70" class="water-green-score-chart"></canvas>
                       </div>
                     </div>
                   </div>
@@ -236,7 +236,7 @@
                             <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
                           </div>
                         </div>
-                        <canvas height="70" class="blog-overview-stats-small-1"></canvas>
+                        <canvas height="70" class="air-green-score-chart"></canvas>
                       </div>
                     </div>
                   </div>
@@ -252,7 +252,7 @@
                             <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
                           </div>
                         </div>
-                        <canvas height="70" class="blog-overview-stats-small-1"></canvas>
+                        <canvas height="70" class="noise-green-score-chart"></canvas>
                       </div>
                     </div>
                   </div>
@@ -404,11 +404,11 @@
             </div>
             <!-- End Small Stats Blocks -->
             <div class="row">
-              <!-- Users Stats -->
+              <!-- CHART 1 -->
               <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Users</h6>
+                    <h6 class="m-0">Air Pollution Sensors</h6>
                   </div>
                   <div class="card-body pt-0">
                     <div class="row border-bottom py-2 bg-light">
@@ -427,7 +427,29 @@
                         <button type="button" class="btn btn-sm btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View Full Report &rarr;</button>
                       </div>
                     </div>
-                    <canvas height="130" style="max-width: 100% !important;" class="blog-overview-users"></canvas>
+                    <canvas height="130" style="max-width: 100% !important;" class="blog-overview-users air-chart-big"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CHART 2 -->
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="stats-small stats-small--1 card card-small">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase">MICS Score (CO ppm)</span>
+                            <h6 class="stats-small__value count my-3">2,390</h6>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                          </div>
+                        </div>
+                        <canvas height="120" class="blog-overview-stats-small-1"></canvas>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -462,7 +484,7 @@
 
               <!-- End Users Stats -->
               <!-- Users By Device Stats -->
-              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <!-- <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="card card-small h-100">
                   <div class="card-header border-bottom">
                     <h6 class="m-0">Users by device</h6>
@@ -486,11 +508,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- End Users By Device Stats -->
               <!-- New Draft Component -->
-              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <!-- Quick Post -->
+              <!-- <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="card card-small h-100">
                   <div class="card-header border-bottom">
                     <h6 class="m-0">New Draft</h6>
@@ -508,11 +529,10 @@
                     </form>
                   </div>
                 </div>
-                <!-- End Quick Post -->
-              </div>
+              </div> -->
               <!-- End New Draft Component -->
               <!-- Discussions Component -->
-              <div class="col-lg-5 col-md-12 col-sm-12 mb-4">
+              <!-- <div class="col-lg-5 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small blog-comments">
                   <div class="card-header border-bottom">
                     <h6 class="m-0">Discussions</h6>
@@ -611,10 +631,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- End Discussions Component -->
               <!-- Top Referrals Component -->
-              <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
+              <!-- <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small">
                   <div class="card-header border-bottom">
                     <h6 class="m-0">Top Referrals</h6>
@@ -671,30 +691,30 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- End Top Referrals Component -->
             </div>
           </div>
           <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="index.html">Dashboard</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="ranklist.html">Ranklist</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Notifications</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
+                <a class="nav-link" href="#">Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#">Support</a>
               </li>
             </ul>
-            <span class="copyright ml-auto my-auto mr-2">Copyright © 2018
-              <a href="https://designrevision.com" rel="nofollow">DesignRevision</a>
+            <span class="copyright ml-auto my-auto mr-2">Copyright © 2019
+              <a href="https://github.com/ankushgarg1998/sih" rel="nofollow">HexCode | Smart India Hackathon 2019</a>
             </span>
           </footer>
         </main>
