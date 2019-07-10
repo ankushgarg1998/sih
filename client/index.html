@@ -143,7 +143,7 @@
                       </div>
                       <div class="notification__content">
                         <span class="notification__category">Hardware</span>
-                        <p>The Noise Pollution sensor at your company has stopped working yesterday.
+                        <p>The Noise Pollution sensor at your company has <span class="text-danger text-semibold">stopped working</span> yesterday.
                             <span class="text-success text-semibold">Our team be there to replace it as soon as possible.</span> It is suggested to not tamper with it.</p>
                       </div>
                     </a>
@@ -187,19 +187,132 @@
             <!-- End Page Header -->
             <!-- THE SCORE -->
             <div class="row">
-              <div class="col-lg col-md-6 col-sm-6 mb-4">
-                <div class="stats-small stats-small--1 card card-small">
-                  <div class="card-body p-0 d-flex">
-                    <div class="d-flex flex-column m-auto">
-                      <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Air Pollution (CO ppm)</span>
-                        <h6 class="stats-small__value count my-3">2,390</h6>
-                      </div>
-                      <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+              <div class="col-lg-9 col-md-9 col-sm mb-4">
+                <div class="row">
+                  <div class="col-lg col-md col-sm">
+                    <div class="stats-small stats-small--1 card card-small" style="height: 30vh;">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase" style="font-size: 1rem;">Cumulative Green Score</span>
+                            <h2 class="stats-small__value count my-3" style="font-size: 3rem;">73<span style="font-size: 1rem">/100</span></h2>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
+                          </div>
+                        </div>
+                        <canvas height="70" class="blog-overview-stats-small-1"></canvas>
                       </div>
                     </div>
-                    <canvas height="120" class="blog-overview-stats-small-1"></canvas>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm">
+                    <div class="stats-small stats-small--1 card card-small" style="height: 30vh;">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase" style="font-size: 1rem;">WATER Green Score</span>
+                            <h2 class="stats-small__value count my-3" style="font-size: 3rem;">73<span style="font-size: 1rem">/100</span></h2>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
+                          </div>
+                        </div>
+                        <canvas height="70" class="blog-overview-stats-small-1"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm">
+                    <div class="stats-small stats-small--1 card card-small" style="height: 30vh;">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase" style="font-size: 1rem;">AIR Green Score</span>
+                            <h2 class="stats-small__value count my-3" style="font-size: 3rem;">73<span style="font-size: 1rem">/100</span></h2>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
+                          </div>
+                        </div>
+                        <canvas height="70" class="blog-overview-stats-small-1"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm">
+                    <div class="stats-small stats-small--1 card card-small" style="height: 30vh;">
+                      <div class="card-body p-0 d-flex">
+                        <div class="d-flex flex-column m-auto">
+                          <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase" style="font-size: 1rem;">NOISE Green Score</span>
+                            <h2 class="stats-small__value count my-3" style="font-size: 3rem;">73<span style="font-size: 1rem">/100</span></h2>
+                          </div>
+                          <div class="stats-small__data">
+                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
+                          </div>
+                        </div>
+                        <canvas height="70" class="blog-overview-stats-small-1"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
+                <div class="card card-small">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Live Status</h6>
+                  </div>
+                  <div class="card-body p-0">
+                    <ul class="list-group list-group-small list-group-flush">
+                      <li class="list-group-item d-flex px-3">
+                        <span class="text-semibold text-fiord-blue">[AIR] MICS</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><a class="blinking-button-working">.</a></span>
+                      </li>
+                      <li class="list-group-item d-flex px-3">
+                        <span class="text-semibold text-fiord-blue">[AIR] Sensor 2</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><a class="blinking-button-working">.</a></span>
+                      </li>
+                      <li class="list-group-item d-flex px-3">
+                        <span class="text-semibold text-fiord-blue">[AIR] Sensor 3</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><a class="blinking-button-working">.</a></span>
+                      </li>
+                      <li class="list-group-item d-flex px-3">
+                        <span class="text-semibold text-fiord-blue">[WATER] pH Sensor</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><a class="blinking-button-working">.</a></span>
+                      </li>
+                      <li class="list-group-item d-flex px-3">
+                        <span class="text-semibold text-fiord-blue">[WATER] Temperature Sensor</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><a class="blinking-button-working">.</a></span>
+                      </li>
+                      <li class="list-group-item d-flex px-3">
+                        <span class="text-semibold text-fiord-blue">[WATER] Turbidity Sensor</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><a class="blinking-button-working">.</a></span>
+                      </li>
+                      <li class="list-group-item d-flex px-3">
+                        <span class="text-semibold text-fiord-blue">[NOISE] Decibel Sensor</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><a class="blinking-button-stopped">.</a></span>
+                      </li>
+                      <li class="list-group-item d-flex px-3">
+                        <span class="text-semibold text-fiord-blue">CORE Device</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><a class="blinking-button-working">.</a></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer border-top">
+                    <div class="row">
+                      <div class="col">
+                        <select class="custom-select custom-select-sm">
+                          <option selected>Last Week</option>
+                          <option value="1">Today</option>
+                          <option value="2">Last Month</option>
+                          <option value="3">Last Year</option>
+                        </select>
+                      </div>
+                      <div class="col text-right view-report">
+                        <a href="#">Full report &rarr;</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
