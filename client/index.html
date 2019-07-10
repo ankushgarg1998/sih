@@ -185,6 +185,25 @@
               </div>
             </div>
             <!-- End Page Header -->
+            <!-- THE SCORE -->
+            <div class="row">
+              <div class="col-lg col-md-6 col-sm-6 mb-4">
+                <div class="stats-small stats-small--1 card card-small">
+                  <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                      <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Air Pollution (CO ppm)</span>
+                        <h6 class="stats-small__value count my-3">2,390</h6>
+                      </div>
+                      <div class="stats-small__data">
+                        <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                      </div>
+                    </div>
+                    <canvas height="120" class="blog-overview-stats-small-1"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Small Stats Blocks -->
             <div class="row">
               <div class="col-lg col-md-6 col-sm-6 mb-4">
@@ -299,6 +318,35 @@
                   </div>
                 </div>
               </div>
+
+              <!-- TEMP -->
+              <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
+                <div class="card card-small">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Users</h6>
+                  </div>
+                  <div class="card-body pt-0">
+                    <!-- <div class="row border-bottom py-2 bg-light">
+                      <div class="col-12 col-sm-6">
+                        <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
+                          <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
+                          <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
+                          <span class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="material-icons"></i>
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
+                        <button type="button" class="btn btn-sm btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View Full Report &rarr;</button>
+                      </div>
+                    </div> -->
+                    <canvas height="130" style="max-width: 100% !important;" class="first-chart"></canvas>
+                  </div>
+                </div>
+              </div>
+
               <!-- End Users Stats -->
               <!-- Users By Device Stats -->
               <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -568,26 +616,6 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
-    <!-- <script src="scripts/firebase.js"></script> -->
-    <script>
-      var firebaseConfig = {
-          apiKey: "AIzaSyBIIZCuo09f5GO9llEobSHFmhrjzF9G0Eo",
-          authDomain: "wasdpollutecheck.firebaseapp.com",
-          databaseURL: "https://wasdpollutecheck.firebaseio.com",
-          projectId: "wasdpollutecheck",
-          storageBucket: "wasdpollutecheck.appspot.com",
-          messagingSenderId: "755507818839",
-          appId: "1:755507818839:web:8d3f6a7d5f2c29f8"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      console.log('BLA');
-      var ref = firebase.database().ref();
-      ref.on("value", function(snapshot) {
-          console.log(snapshot.val());
-      }, function (error) {
-          console.log("Error: " + error.code);
-      });
-    </script>
+    <script src="scripts/firebase.js"></script>
   </body>
 </html>
