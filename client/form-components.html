@@ -9,59 +9,23 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/custom.css">
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="styles/shards-dashboards.1.1.0.min.css">
     <link rel="stylesheet" href="styles/extras.1.1.0.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+   
+    <style>
+    /* #dtBasicExample{
+      width: 100% !important;
+    } */
+    .dataTables_wrapper {
+    width: 100%;
+    }
+    </style>
+   
   </head>
   <body class="h-100">
-    <div class="color-switcher animated">
-      <h5>Accent Color</h5>
-      <ul class="accent-colors">
-        <li class="accent-primary active" data-color="primary">
-          <i class="material-icons">check</i>
-        </li>
-        <li class="accent-secondary" data-color="secondary">
-          <i class="material-icons">check</i>
-        </li>
-        <li class="accent-success" data-color="success">
-          <i class="material-icons">check</i>
-        </li>
-        <li class="accent-info" data-color="info">
-          <i class="material-icons">check</i>
-        </li>
-        <li class="accent-warning" data-color="warning">
-          <i class="material-icons">check</i>
-        </li>
-        <li class="accent-danger" data-color="danger">
-          <i class="material-icons">check</i>
-        </li>
-      </ul>
-      <div class="actions mb-4">
-        <a class="mb-2 btn btn-sm btn-primary w-100 d-table mx-auto extra-action" href="https://designrevision.com/downloads/shards-dashboard-lite/">
-          <i class="material-icons">cloud</i> Download</a>
-        <a class="mb-2 btn btn-sm btn-white w-100 d-table mx-auto extra-action" href="https://designrevision.com/docs/shards-dashboard-lite">
-          <i class="material-icons">book</i> Documentation</a>
-      </div>
-      <div class="social-wrapper">
-        <div class="social-actions">
-          <h5 class="my-2">Help us Grow</h5>
-          <div class="inner-wrapper">
-            <a class="github-button" href="https://github.com/DesignRevision/shards-dashboard" data-icon="octicon-star" data-show-count="true" aria-label="Star DesignRevision/shards-dashboard on GitHub">Star</a>
-            <!-- <iframe style="width: 91px; height: 21px;"src="https://yvoschaap.com/producthunt/counter.html#href=https%3A%2F%2Fwww.producthunt.com%2Fr%2Fp%2F112998&layout=wide" width="56" height="65" scrolling="no" frameborder="0" allowtransparency="true"></iframe> -->
-          </div>
-        </div>
-        <div id="social-share" data-url="https://designrevision.com/downloads/shards-dashboard-lite/" data-text="🔥 Check out Shards Dashboard Lite, a free and beautiful Bootstrap 4 admin dashboard template!" data-title="share"></div>
-        <div class="loading-overlay">
-          <div class="spinner"></div>
-        </div>
-      </div>
-      <div class="close">
-        <i class="material-icons">close</i>
-      </div>
-    </div>
-    <div class="color-switcher-toggle animated pulse infinite">
-      <i class="material-icons">settings</i>
-    </div>
     <div class="container-fluid">
       <div class="row">
         <!-- Main Sidebar -->
@@ -71,7 +35,7 @@
               <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
                 <div class="d-table m-auto">
                   <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/shards-dashboards-logo.svg" alt="Shards Dashboard">
-                  <span class="d-none d-md-inline ml-1">Shards Dashboard</span>
+                  <span class="d-none d-md-inline ml-1">Pollution Dashboard</span>
                 </div>
               </a>
               <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
@@ -91,25 +55,25 @@
           <div class="nav-wrapper">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link " href="index.html">
+                <a class="nav-link active" href="index.html">
                   <i class="material-icons">edit</i>
-                  <span>Blog Dashboard</span>
+                  <span>Dashboard</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="components-blog-posts.html">
-                  <i class="material-icons">vertical_split</i>
-                  <span>Blog Posts</span>
+                <a class="nav-link " href="ranking.html">
+                  <i class="material-icons">list</i>
+                  <span>Ranking</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link " href="add-new-post.html">
                   <i class="material-icons">note_add</i>
                   <span>Add New Post</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="form-components.html">
+                <a class="nav-link " href="form-components.html">
                   <i class="material-icons">view_module</i>
                   <span>Forms &amp; Components</span>
                 </a>
@@ -119,17 +83,29 @@
                   <i class="material-icons">table_chart</i>
                   <span>Tables</span>
                 </a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link " href="user-profile-lite.html">
                   <i class="material-icons">person</i>
-                  <span>User Profile</span>
+                  <span>Company Profile</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link " href="errors.html">
                   <i class="material-icons">error</i>
-                  <span>Errors</span>
+                  <span>Error History</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="errors.html">
+                  <i class="material-icons">settings</i>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="errors.html">
+                  <i class="material-icons">call</i>
+                  <span>Support</span>
                 </a>
               </li>
             </ul>
@@ -166,8 +142,8 @@
                       </div>
                       <div class="notification__content">
                         <span class="notification__category">Analytics</span>
-                        <p>Your website’s active users count increased by
-                          <span class="text-success text-semibold">28%</span> in the last week. Great job!</p>
+                        <p>Your company's pollution output has been reduced by
+                          <span class="text-success text-semibold">28%</span> in the last month. Great job!</p>
                       </div>
                     </a>
                     <a class="dropdown-item" href="#">
@@ -177,9 +153,9 @@
                         </div>
                       </div>
                       <div class="notification__content">
-                        <span class="notification__category">Sales</span>
-                        <p>Last week your store’s sales count decreased by
-                          <span class="text-danger text-semibold">5.52%</span>. It could have been worse!</p>
+                        <span class="notification__category">Hardware</span>
+                        <p>The Noise Pollution sensor at your company has stopped working yesterday.
+                            <span class="text-success text-semibold">Our team be there to replace it as soon as possible.</span> It is suggested to not tamper with it.</p>
                       </div>
                     </a>
                     <a class="dropdown-item notification__all text-center" href="#"> View all Notifications </a>
@@ -188,7 +164,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img class="user-avatar rounded-circle mr-2" src="images/avatars/0.jpg" alt="User Avatar">
-                    <span class="d-none d-md-inline-block">Sierra Brooks</span>
+                    <span class="d-none d-md-inline-block">Example Company</span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-small">
                     <a class="dropdown-item" href="user-profile-lite.html">
@@ -211,20 +187,15 @@
             </nav>
           </div>
           <!-- / .main-navbar -->
-          <div class="alert alert-accent alert-dismissible fade show mb-0" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-            <i class="fa fa-info mx-2"></i>
-            <strong>How you doin'?</strong> I'm just a friendly, good-looking notification message and I come in all the colors you can see below. Pretty cool, huh? </div>
           <div class="main-content-container container-fluid px-4">
             <!-- Page Header -->
-            <div class="page-header row no-gutters py-4 mb-3 border-bottom">
-              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                <span class="text-uppercase page-subtitle">Overview</span>
-                <h3 class="page-title">Forms & Components</h3>
+            <div class="page-header row no-gutters py-4">
+                <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                  <span class="text-uppercase page-subtitle">Ranking</span>
+                  <h3 class="page-title">Your Cluster Ranking</h3>
+                </div>
               </div>
-            </div>
+
             <!-- End Page Header -->
             <div class="row mb-2">
               <div class="col-12">
