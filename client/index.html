@@ -86,13 +86,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="errors.html">
+                <a class="nav-link " href="settings.html">
                   <i class="material-icons">settings</i>
                   <span>Settings</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="errors.html">
+                <a class="nav-link " href="support.html">
                   <i class="material-icons">call</i>
                   <span>Support</span>
                 </a>
@@ -158,10 +158,10 @@
                   <div class="dropdown-menu dropdown-menu-small">
                     <a class="dropdown-item" href="user-profile-lite.html">
                       <i class="material-icons">&#xE7FD;</i> Profile</a>
-                    <a class="dropdown-item" href="components-blog-posts.html">
-                      <i class="material-icons">vertical_split</i> Blog Posts</a>
-                    <a class="dropdown-item" href="add-new-post.html">
-                      <i class="material-icons">note_add</i> Add New Post</a>
+                    <a class="dropdown-item" href="ranking.html">
+                      <i class="material-icons">list</i> Ranking</a>
+                    <a class="dropdown-item" href="settings.html">
+                      <i class="material-icons">settings</i> Settings</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="#">
                       <i class="material-icons text-danger">&#xE879;</i> Logout </a>
@@ -198,14 +198,16 @@
                             <h2 id="cumulative-score" class="stats-small__value count my-3" style="font-size: 3rem;">_<span style="font-size: 1rem">/100</span></h2>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
+                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">12.2%</span>
                           </div>
                         </div>
-                        <canvas height="70" class="cumulative-green-score-chart"></canvas>
+                        <canvas height="70" class="blog-overview-stats-small-1 chartjs-render-monitor"></canvas>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <!-- SCORES -->
                 <hr>
                 <div class="row">
                   <div class="col-lg-4 col-md-4 col-sm">
@@ -217,10 +219,10 @@
                             <h2 id="water-score" class="stats-small__value count my-3" style="font-size: 3rem;">_<span style="font-size: 1rem">/100</span></h2>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
+                            <span class="stats-small__percentage stats-small__percentage--decrease" style="font-size: 1rem;">1.0%</span>
                           </div>
                         </div>
-                        <canvas height="70" class="water-green-score-chart"></canvas>
+                        <canvas height="200" class="blog-overview-stats-small-2 chartjs-render-monitor"></canvas>
                       </div>
                     </div>
                   </div>
@@ -233,10 +235,10 @@
                             <h2 id="air-score" class="stats-small__value count my-3" style="font-size: 3rem;">_<span style="font-size: 1rem">/100</span></h2>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
+                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">0.9%</span>
                           </div>
                         </div>
-                        <canvas height="70" class="air-green-score-chart"></canvas>
+                        <canvas height="200" class="blog-overview-stats-small-3 chartjs-render-monitor"></canvas>
                       </div>
                     </div>
                   </div>
@@ -249,15 +251,17 @@
                             <h2 id="noise-score" class="stats-small__value count my-3" style="font-size: 3rem;">_<span style="font-size: 1rem">/100</span></h2>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">4.7%</span>
+                            <span class="stats-small__percentage stats-small__percentage--increase" style="font-size: 1rem;">14.7%</span>
                           </div>
                         </div>
-                        <canvas height="70" class="noise-green-score-chart"></canvas>
+                        <canvas height="200" class="blog-overview-stats-small-4 chartjs-render-monitor"></canvas>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- LIVE STATUS -->
               <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small">
                   <div class="card-header border-bottom">
@@ -333,7 +337,7 @@
                             <h6 id="latest-pH-value" class="stats-small__value count my-3">5.8</h6>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <span id="change-pH-value" class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                           </div>
                         </div>
                         <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
@@ -350,7 +354,7 @@
                             <h6 id="latest-temp-value" class="stats-small__value count my-3">5.8</h6>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <span id="change-temp-value" class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                           </div>
                         </div>
                         <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
@@ -405,7 +409,7 @@
                             <h6 id="latest-noise-value" class="stats-small__value count my-3">5.8</h6>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <span id="change-noise-value" class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                           </div>
                         </div>
                         <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
@@ -459,7 +463,7 @@
                             <h6 id="latest-co-value" class="stats-small__value count my-3">5.8</h6>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <span id="change-co-value" class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                           </div>
                         </div>
                         <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
@@ -476,7 +480,7 @@
                             <h6 id="latest-nh-value" class="stats-small__value count my-3">5.8</h6>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <span id="change-nh-value" class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                           </div>
                         </div>
                         <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
@@ -493,7 +497,7 @@
                             <h6 id="latest-sd-value" class="stats-small__value count my-3">5.8</h6>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <span id="change-sd-value" class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                           </div>
                         </div>
                         <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
@@ -510,7 +514,7 @@
                             <h6 id="latest-sox-value" class="stats-small__value count my-3">5.8</h6>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <span id="change-sox-value" class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                           </div>
                         </div>
                         <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
@@ -527,7 +531,7 @@
                             <h6 id="latest-nox-value" class="stats-small__value count my-3">5.8</h6>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <span id="change-nox-value" class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                           </div>
                         </div>
                         <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
@@ -544,7 +548,7 @@
                             <h6 id="latest-voc-value" class="stats-small__value count my-3">5.8</h6>
                           </div>
                           <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <span id="change-voc-value" class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                           </div>
                         </div>
                         <!-- <canvas height="120" class="blog-overview-stats-small-1"></canvas> -->
