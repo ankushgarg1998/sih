@@ -92,8 +92,10 @@
     // Generate the small charts
     boSmallStatsDatasets.map(function (el, index) {
       var chartOptions = boSmallStatsOptions(Math.max.apply(Math, el.data) + 1);
+      console.log('let us C');
+      console.log(el.data);
       var ctx = document.getElementsByClassName('blog-overview-stats-small-' + (index + 1));
-      new Chart(ctx, {
+      var myChart = new Chart(ctx, {
         type: 'line',
         data: {
           labels: ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6", "Label 7"],
@@ -108,7 +110,22 @@
         },
         options: chartOptions
       });
-    });
+      let data2 =[3,1,4,7,4,2,5]
+      var i = 1;
+      function changeDataSets() {
+        if (i % 2 == 0) {
+          myChart.data.datasets[0].data = el.data;
+        } else {
+           myChart.data.datasets[0].data = data2;
+        }   
+        i++;
+        myChart.update();
+      }
+
+      setInterval(function() {
+      changeDataSets();
+      }, 500);
+});
 
 
     //
