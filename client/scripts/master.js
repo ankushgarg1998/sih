@@ -101,7 +101,8 @@ ref.on("value", function(snapshot) {
             }
         },
         hover: {
-            mode: 'nearest'
+            mode: 'nearest',
+            intersect: false
         }
     });
 
@@ -129,7 +130,8 @@ ref.on("value", function(snapshot) {
             }
         },
         hover: {
-            mode: 'nearest'
+            mode: 'nearest',
+            intersect: false
         }
     });
 
@@ -157,7 +159,8 @@ ref.on("value", function(snapshot) {
             }
         },
         hover: {
-            mode: 'nearest'
+            mode: 'nearest',
+            intersect: false
         }
     });
 
