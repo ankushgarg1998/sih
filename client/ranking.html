@@ -18,24 +18,6 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-  <style>
-    .dataTables_wrapper {
-      width: 100%;
-      padding: 15px;
-    }
-    label {
-      display: inline-flex;
-    }
-    .custom-select-sm {
-      margin: 0 6px;
-    }
-    .dataTables_paginate .paginate_button{
-      padding: 0 !important;
-      border: transparent !important;
-      margin: 6px 6px 6px 6px !important;
-    }
-  </style>
-
 </head>
 
 <body class="h-100">
@@ -77,7 +59,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active " href="ranking.html">
+              <a class="nav-link " href="ranking.html">
                 <i class="material-icons">list</i>
                 <span>Ranking</span>
               </a>
@@ -107,7 +89,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="errors.html">
+              <a class="nav-link active" href="errors.html">
                 <i class="material-icons">error</i>
                 <span>Error History</span>
               </a>
@@ -212,187 +194,88 @@
           <!-- Page Header -->
           <div class="page-header row no-gutters py-4">
             <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-              <span class="text-uppercase page-subtitle">Ranking</span>
-              <h3 class="page-title">Your Cluster Ranking</h3>
+              <span class="text-uppercase page-subtitle">Errors</span>
+              <h3 class="page-title">Your Error History</h3>
             </div>
           </div>
-          <!-- End Page Header -->
-          <!-- THE SCORE -->
+
           <div class="row">
-            <div class="col-lg col-md-6 col-sm-6 mb-4">
-              <div class="stats-small stats-small--1 card card-small">
-                <div class="card-header border-bottom">
-                  <h6 class="m-0">Rank List of Cluster</h6>
-                </div>
-                <div class="card-body p-0 d-flex">
-
-
-
-                  <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                      <tr>
-                        <th class="th-sm">Company Name
-                        </th>
-                        <th class="th-sm">Scale
-                        </th>
-                        <th class="th-sm">Pollution %age
-                        </th>
-                        <th class="th-sm">Score
-                        </th>
-                        <th class="th-sm">Rank
-
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Xylcorb</td>
-                        <td>Small scale</td>
-                        <td>58%</td>
-                        <td>40</td>
-                        <td>80</td>
-
-                      </tr>
-                      <tr>
-                        <td>KS Textiles</td>
-                        <td>Mid scale</td>
-                        <td>80%</td>
-                        <td>35</td>
-                        <td>380</td>
-
-                      </tr>
-                      <tr>
-                        <td>TN Textiles</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>Dutta Textiles</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>Sheoran Industries Pvt Ltd</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>Dhand Garments</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>Malik Industries</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>Power Textiles</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>Storm Industries</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>Beniwal Textiles</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>Chinese Textiles</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>UTF Pvt Ltd</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-                      <tr>
-                        <td>Team Ltd</td>
-                        <td>Small scale</td>
-                        <td>50%</td>
-                        <td>59</td>
-                        <td>63</td>
-
-                      </tr>
-
-                    </tbody>
-                    <!-- <tfoot>
-                  <tr>
-                    <th>Company Name
-                    </th>
-                    <th>Scale
-                    </th>
-                    <th>Pollution %age
-                    </th>
-                    <th>Score
-                    </th>
-                    <th>Rank
-                    
-                  </tr>
-                </tfoot> -->
-                  </table>
+              <div class="col">
+                <div class="card card-small mb-4">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Errors below</h6>
+                  </div>
+                  <div class="card-body p-0 pb-3 text-center">
+                    <table class="table mb-0">
+                      <thead class="bg-light">
+                        <tr>
+                          <th scope="col" class="border-0">S. No.</th>
+                          <th scope="col" class="border-0">Sensor</th>
+                          <th scope="col" class="border-0">Condition</th>
+                          <th scope="col" class="border-0">Fault</th>
+                          <th scope="col" class="border-0">Time of Fault</th>
+                         
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Noise Sensor</td>
+                          <td>Not working</td>
+                          <td>Node failure occurred</td>
+                          <td>10-07-2019 11:00 AM</td>
+                          
+                        </tr>
+                        <!-- <tr>
+                          <td>2</td>
+                          <td>Clark</td>
+                          <td>Angela</td>
+                          <td>Estonia</td>
+                          <td>Borghetto di Vara</td>
+                          <td>1-660-850-1647</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Jerry</td>
+                          <td>Nathan</td>
+                          <td>Cyprus</td>
+                          <td>Braunau am Inn</td>
+                          <td>214-4225</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Colt</td>
+                          <td>Angela</td>
+                          <td>Liberia</td>
+                          <td>Bad Hersfeld</td>
+                          <td>1-848-473-7416</td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
 
+          </main>
+        </div>
+      </div>
 
-          <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-          <script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js"></script>
-          <script src="scripts/extras.1.1.0.min.js"></script>
-          <script src="scripts/shards-dashboards.1.1.0.min.js"></script>
-          <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-          <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-          <script src="scripts/app/app-blog-overview.1.1.0.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
-          <script src="scripts/app/ranking.js"></script>
-          <script src="scripts/firebase.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js"></script>
+    <script src="scripts/extras.1.1.0.min.js"></script>
+    <script src="scripts/shards-dashboards.1.1.0.min.js"></script>
+    <script src="scripts/app/app-blog-overview.1.1.0.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <script src="scripts/firebase.js"></script>
+    <script src="scripts/master.js"></script>
 
+  </body>
 </html>
