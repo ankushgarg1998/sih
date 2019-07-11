@@ -10,6 +10,7 @@ var airChart3 = $('.air-chart-3')[0].getContext('2d');
 
 
 var latestValues = {};
+var changeValues = {};
 var scores = {
     air: 100,
     water: 100,
@@ -28,6 +29,8 @@ function parseData(data) {
             Object.keys(data[key]).forEach(keykey => {
                 if(!Object.keys(obj).includes(keykey))
                     obj[keykey] = [];
+                else
+                    changeValues[keykey] = (data[key][keykey] - latestValues[keykey])*2;
                 obj[keykey].push(data[key][keykey]);
                 latestValues[keykey] = data[key][keykey];
             });
@@ -38,8 +41,18 @@ function parseData(data) {
 
 function fillLatestValues() {
     Object.keys(latestValues).forEach(key => {
-        console.log(`#latest-${key}-value`);
+        // console.log(`#latest-${key}-value`);
         $(`#latest-${key}-value`)[0].innerHTML = latestValues[key];
+    });
+
+    Object.keys(changeValues).forEach(key => {
+        console.log(`#change-${key}-value`);
+        if(changeValues[key] < 0) {
+            changeValues[key] *= -1;
+            $(`#change-${key}-value`)[0].classList.remove('stats-small__percentage--increase');
+            $(`#change-${key}-value`)[0].classList.add('stats-small__percentage--decrease');
+        }
+        $(`#change-${key}-value`)[0].innerHTML = changeValues[key].toFixed(1) + '%';
     });
 
     // MANAGE CHANGE VALUES
@@ -98,11 +111,11 @@ ref.on("value", function(snapshot) {
                         max: 14
                     }
                 }]
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: false
             }
-        },
-        hover: {
-            mode: 'nearest',
-            intersect: false
         }
     });
 
@@ -127,11 +140,11 @@ ref.on("value", function(snapshot) {
                 point: {
                     radius: 0
                 }
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: false
             }
-        },
-        hover: {
-            mode: 'nearest',
-            intersect: false
         }
     });
 
@@ -156,11 +169,11 @@ ref.on("value", function(snapshot) {
                 point: {
                     radius: 0
                 }
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: false
             }
-        },
-        hover: {
-            mode: 'nearest',
-            intersect: false
         }
     });
 
