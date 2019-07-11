@@ -1,0 +1,44 @@
+﻿STATE,INDUSTRIAL CLUSTERS/ AREAS,AIR,WATER,LAND,CEPI,STATUS
+Andhra Pradesh,Vishakha patnam,38,43,43,52.31,An-Wn-Ln
+Andhra Pradesh,Patancheru-Bollaram,62.5,67.25,43,76.05,Ac-Wc-Ln
+Chhatisgarh,Korba,59.5,47,50.5,69.11,As-Wn-Ls
+Delhi,"Nazafgarh drain basin (including Anand Parvat, Naraina, Okhla and Wazirpur)",56.88,57.5,60.5,73.42,As-Ws-Lc
+Gujarat,Ankaleshwar,67.5,68.75,57.75,80.93,Ac-Wc-Ls
+Gujarat,Vapi ,51.75,79.5,54.75,85.31,As-Wc-Ls
+Gujarat,Ahmedabad  ,49.75,60.5,46,69.54,An-Wc-Ln
+Gujarat,Vatva ,43,80,40,83.44,An-Wc-Ln
+Gujarat,Bhavnagar ,30.75,57.5,40.5,62.79,An-Ws-Ln
+Gujarat,Junagarh ,42.75,40,43,52.75,An-Wn-Ln
+Haryana,Faridabad,46,67.5,40.5,73.55,An-Wc-Ln
+Haryana,Panipat,48.25,76,45.5,81.27,An-Wc-Ln
+Jharkhand,Dhanbad,50.5,47,63,71.78,As-Wn-Lc
+Karnataka,Mangalore,54.75,58.25,41,67.62,As-Ws-Ln
+Karnataka,Bhadravati,37.38,35.5,35.5,45.27,An?Wn?Ln
+Kerala,"Cochin, Greater",48,45.5,42,57.94,An-Wn-Ln
+Madhya Pradesh,Indore,65,70.5,43,78.75,Ac-Wc-Ln
+Maharashtra,Chandrapur,51.75,50.5,75.5,81.9,As-Ws-Lc
+Maharashtra,Dombivalli,51,64.5,43,72.29,As-Wc-Ln
+Maharashtra,Aurangabad,56.75,55.5,50.5,68.87,As-Ws-Ls
+Maharashtra,Navi Mumbai,47,66,43,72.87,An-Wc-Ln
+Maharashtra,Tarapur,58,63,48,73.3,As-Wc-Ln
+Orissa,Angul Talchar,61.75,60.5,48,72.86,Ac-Wc-Ln
+Orissa,Ib valley,48,48,47,59.73,An-Wn-Ln
+Orissa,Jharsuguda,65,50.5,47,73.31,Ac-Ws-Ln
+Punjab,Ludhiana,49.5,68,48.75,75.72,An-Wc-Ln
+Punjab,Mandi Gobind Garh,55,67,60.5,77.98,As-Wc-Lc
+Rajasthan,Bhiwadi,62.75,46,46,70.63,Ac-Wn-Ln
+Rajasthan,Jodhpur,57.5,50.5,69,78,As-Ws-Lc
+Rajasthan,Pali,54,72.5,68.75,82.71,As-Wc-Lc
+Tamil Nadu,Vellore,59.75,71.5,48,79.67,As-Wc-Ln
+Tamil Nadu,Cuddalore,45.5,53.5,60.5,70.12,An-Ws-Lc
+Tamil Nadu,Manali ,55.5,69,48,77.26,As-Wc-Ln
+Tamil Nadu,Coimbatore,32.38,48,30.5,53.14,An-Wn-Ln
+Uttar Pradesh,Ghaziabad,69.5,76,48.75,84.13,Ac-Wc-Ln
+Uttar Pradesh,Singrauli,68,70.5,63.5,83.24,Ac-Wc-Lc
+Uttar Pradesh,Noida,50,72.5,45,78.69,As-Wc-Ln
+Uttar Pradesh,Kanpur,55,64.5,40,72.31,As-Wc-Ln
+Uttar Pradesh,Agra,57,55,49.5,68.71,As?Ws?Ln
+Uttar Pradesh,Varanasi-Mirzapur,44,47,42.5,56.91,An-Wn-Ln
+West Bengal,Haldia,48.75,50,47.5,61.58,An-Ws-Ln
+West Bengal,Howrah,43,51,48,61.11,An-Ws-Ln
+West Bengal,Asansole,47.38,40.5,40.5,56.01,An-Wn-Ln
