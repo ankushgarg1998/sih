@@ -110,21 +110,21 @@
         },
         options: chartOptions
       });
-      let data2 =[3,1,4,7,4,2,5]
-      var i = 1;
-      function changeDataSets() {
-        if (i % 2 == 0) {
-          myChart.data.datasets[0].data = el.data;
-        } else {
-           myChart.data.datasets[0].data = data2;
-        }   
-        i++;
-        myChart.update();
-      }
+      // let data2 =[3,1,4,7,4,2,5]
+      // var i = 1;
+      // function changeDataSets() {
+      //   if (i % 2 == 0) {
+      //     myChart.data.datasets[0].data = el.data;
+      //   } else {
+      //      myChart.data.datasets[0].data = data2;
+      //   }   
+      //   i++;
+      //   myChart.update();
+      // }
 
-      setInterval(function() {
-      changeDataSets();
-      }, 500);
+      // setInterval(function() {
+      // changeDataSets();
+      // }, 500);
 });
 
 
