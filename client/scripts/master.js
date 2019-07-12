@@ -39,7 +39,7 @@ function parseData(data) {
     return obj;
 }
 
-function fillLatestValues() {
+function fillLatestValues(b = 0) {
     Object.keys(latestValues).forEach(key => {
         // console.log(`#latest-${key}-value`);
         $(`#latest-${key}-value`)[0].innerHTML = latestValues[key];
@@ -57,21 +57,23 @@ function fillLatestValues() {
 
     // MANAGE CHANGE VALUES
 
-    scores.water -= Math.abs(7 - latestValues['pH'])*5;
-    scores.water -= Math.abs(27 - latestValues['temp']);
-    scores.water = parseInt(scores.water < 0? 0: scores.water);
+    if(b === 0) {
+        scores.water -= Math.abs(7 - latestValues['pH'])*5;
+        scores.water -= Math.abs(27 - latestValues['temp']);
+        scores.water = parseInt(scores.water < 0? 0: scores.water);
 
-    scores.sound -= (latestValues['noise'] > 50? latestValues['noise']: 0);
+        scores.sound -= (latestValues['noise'] > 50? latestValues['noise']: 0);
 
-    scores.air = 62;
+        scores.air = 62;
 
-    scores.cumulative = parseInt((scores.air + scores.water + scores.noise)/3);
-    console.log(scores);
+        scores.cumulative = parseInt((scores.air + scores.water + scores.noise)/3);
+        console.log(scores);
 
-    $('#air-score')[0].innerHTML = parseInt(scores.air) + '<span style="font-size: 1rem">/100</span>';
-    $('#water-score')[0].innerHTML = parseInt(scores.water) + '<span style="font-size: 1rem">/100</span>';
-    $('#noise-score')[0].innerHTML = parseInt(scores.noise) + '<span style="font-size: 1rem">/100</span>';
-    $('#cumulative-score')[0].innerHTML = parseInt(scores.cumulative) + '<span style="font-size: 1rem">/100</span>';
+        $('#air-score')[0].innerHTML = parseInt(scores.air) + '<span style="font-size: 1rem">/100</span>';
+        $('#water-score')[0].innerHTML = parseInt(scores.water) + '<span style="font-size: 1rem">/100</span>';
+        $('#noise-score')[0].innerHTML = parseInt(scores.noise) + '<span style="font-size: 1rem">/100</span>';
+        $('#cumulative-score')[0].innerHTML = parseInt(scores.cumulative) + '<span style="font-size: 1rem">/100</span>';
+    }
 }
 
 console.log('BLA2');
@@ -285,6 +287,22 @@ ref.on("value", function(snapshot) {
         }
     });
 
+    setInterval(() => {
+        ref.on("value", function(snapshot) {
+            let parsedData = parseData(snapshot.val());
+            console.log('parsed', parsedData);
+            fillLatestValues(1);
+            madeWaterphChart.data.datasets[0].data = parsedData['pH'];
+            madeWaterTempChart.data.datasets[0].data = parsedData['temp'];
+            madeWaterNoiseChart.data.datasets[0].data = parsedData['noise'];
+            madeWaterAirChart1.data.datasets[0].data = parsedData['co'];
+            madeWaterAirChart1.data.datasets[1].data = parsedData['nh'];
+            madeWaterAirChart1.data.datasets[0].data = parsedData['sox'];
+            madeWaterAirChart1.data.datasets[1].data = parsedData['nox'];
+            madeWaterAirChart1.data.datasets[0].data = parsedData['sd'];
+            madeWaterAirChart1.data.datasets[1].data = parsedData['voc'];
+        })
+    }, 2000);
 
 }, function (error) {
     console.log("Error: " + error.code);
