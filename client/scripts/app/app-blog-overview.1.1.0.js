@@ -92,8 +92,8 @@
     // Generate the small charts
     boSmallStatsDatasets.map(function (el, index) {
       var chartOptions = boSmallStatsOptions(Math.max.apply(Math, el.data) + 1);
-      console.log('let us C');
-      console.log(el.data);
+      // console.log('let us C');
+      // console.log(el.data);
       var ctx = document.getElementsByClassName('blog-overview-stats-small-' + (index + 1));
       var myChart = new Chart(ctx, {
         type: 'line',

@@ -3289,7 +3289,7 @@ clusterCompanies.sort((a, b) => {
 clusterCompanies.forEach((company, i) => {
     let row = tbody.insertRow(i);
     let cell = row.insertCell(0);
-    cell.innerHTML = company['Industry Name'];
+    cell.innerHTML = `<a href="index.html">${company['Industry Name']}</a>`;
     cell = row.insertCell(1);
     cell.innerHTML = company['Pollution Severity'];
     cell = row.insertCell(2);

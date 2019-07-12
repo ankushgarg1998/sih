@@ -31,12 +31,13 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon1">@</span>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                        <input id="uname" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password" value="myCoolPassword">
+                                    <input id="pass" type="password" class="form-control" id="inputPassword4" placeholder="Password" value="myCoolPassword">
                                 </div>
+                                <button type="button" onclick="clicked()" class="mb-2 btn btn-sm btn-success mr-1">LOGIN</button>
                             </form>
                         </div>
                     </div>
@@ -53,10 +54,16 @@
     <script src="scripts/extras.1.1.0.min.js"></script>
     <script src="scripts/shards-dashboards.1.1.0.min.js"></script>
     <script src="scripts/app/app-blog-overview.1.1.0.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
-    <script src="scripts/firebase.js"></script>
-    <script src="scripts/master.js"></script>
+    <script>
+        function clicked() {
+            if($('#uname').val().toUpperCase() === 'AHMEDABAD') {
+                window.location.href = "cluster-dash.html";
+            } else if ($('#uname').val().toUpperCase() === 'MINISTRY') {
+                window.location.href = "ministry-dash.html";
+            } else {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
 </body>
 </html>
