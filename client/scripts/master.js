@@ -43,8 +43,13 @@ function parseData(data) {
                 else
                     changeValues[keykey] = (data[key][keykey] - latestValues[keykey])*2;
                 if(keykey === 'pH') {
-                    obj[keykey].push(6.9);
-                    latestValues[keykey] = 6.9;
+                    let phVal = 6.9
+                    obj[keykey].push(phVal);
+                    latestValues[keykey] = phVal;
+                } else if(keykey === 'noise') {
+                    let noiseVal = (data[key][keykey] === 1? 0: 1);
+                    obj[keykey].push(noiseVal);
+                    latestValues[keykey] = (noiseVal === 1? '> 60dB': '< 60dB');
                 } else {
                     obj[keykey].push(data[key][keykey]);
                     latestValues[keykey] = data[key][keykey];
