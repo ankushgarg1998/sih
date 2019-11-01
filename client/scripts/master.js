@@ -24,11 +24,18 @@ function parseData(data) {
         x: [],
         'x-pH': [],
         'x-temp': [],
-        'x-noise': []
+        'x-noise': [],
+        'x-co': [],
+        'x-nh': [],
+        'x-sox': [],
+        'x-nox': [],
+        'x-sd': [],
+        'x-voc': [],
+        'x-db': []
     };
     Object.keys(data).forEach(key => {
         // if(Date.parse(key) > 1562741700000 && Date.parse(key) < 1572427858000) {
-        if(Date.parse(key) > 1572505639000) {
+        if(Date.parse(key) > Date.parse("2019-10-31 12:37:19")) {
             obj.x.push(key);
             Object.keys(data[key]).forEach(keykey => {
                 if(!Object.keys(obj).includes(keykey))
@@ -36,13 +43,15 @@ function parseData(data) {
                 else
                     changeValues[keykey] = (data[key][keykey] - latestValues[keykey])*2;
                 if(keykey === 'pH') {
-                    obj['x-pH'].push(key);
                     obj[keykey].push(6.9);
                     latestValues[keykey] = 6.9;
                 } else {
                     obj[keykey].push(data[key][keykey]);
                     latestValues[keykey] = data[key][keykey];
                 }
+                let str = `x-${keykey}`;
+                if(obj[str])
+                    obj[str].push(key);
             });
         }
     });
@@ -52,7 +61,11 @@ function parseData(data) {
 function fillLatestValues(b = 0) {
     Object.keys(latestValues).forEach(key => {
         // console.log(`#latest-${key}-value`);
-        $(`#latest-${key}-value`)[0].innerHTML = latestValues[key];
+        try {
+            $(`#latest-${key}-value`)[0].innerHTML = latestValues[key];
+        } catch(e) {
+            console.log(e);
+        }
     });
 
     Object.keys(changeValues).forEach(key => {
@@ -62,7 +75,11 @@ function fillLatestValues(b = 0) {
             $(`#change-${key}-value`)[0].classList.remove('stats-small__percentage--increase');
             $(`#change-${key}-value`)[0].classList.add('stats-small__percentage--decrease');
         }
-        $(`#change-${key}-value`)[0].innerHTML = changeValues[key].toFixed(1) + '%';
+        try {
+            $(`#change-${key}-value`)[0].innerHTML = changeValues[key].toFixed(1) + '%';
+        } catch(e) {
+            console.log(e);
+        }
     });
 
     // MANAGE CHANGE VALUES
@@ -97,7 +114,7 @@ ref.on("value", function(snapshot) {
     let madeWaterphChart = new Chart(waterChartPh, {
         type: 'line',
         data: {
-            labels: parsedData['x'],
+            labels: parsedData['x-pH'],
             datasets: [{
                 label: 'pH Values',
                 data: parsedData['pH'],
@@ -134,7 +151,7 @@ ref.on("value", function(snapshot) {
     let madeWaterTempChart = new Chart(waterChartTemp, {
         type: 'line',
         data: {
-            labels: parsedData['x'],
+            labels: parsedData['x-temp'],
             datasets: [{
                 label: 'Temperature Values',
                 data: parsedData['temp'],
@@ -163,7 +180,7 @@ ref.on("value", function(snapshot) {
     let madeNoiseChart = new Chart(noiseChart, {
         type: 'line',
         data: {
-            labels: parsedData['x'],
+            labels: parsedData['x-noise'],
             datasets: [{
                 label: 'Loudness Values (dB)',
                 data: parsedData['noise'],
@@ -192,7 +209,7 @@ ref.on("value", function(snapshot) {
     let madeAirChart1 = new Chart(airChart1, {
         type: 'line',
         data: {
-            labels: parsedData['x'],
+            labels: parsedData['x-co'],
             datasets: [{
                 label: 'CO Values',
                 data: parsedData['co'],
@@ -228,7 +245,7 @@ ref.on("value", function(snapshot) {
     let madeAirChart2 = new Chart(airChart2, {
         type: 'line',
         data: {
-            labels: parsedData['x'],
+            labels: parsedData['x-sox'],
             datasets: [{
                 label: 'SOX Values',
                 data: parsedData['sox'],
@@ -264,7 +281,7 @@ ref.on("value", function(snapshot) {
     let madeAirChart3 = new Chart(airChart3, {
         type: 'line',
         data: {
-            labels: parsedData['x'],
+            labels: parsedData['x-sd'],
             datasets: [{
                 label: 'Smoke Density Values',
                 data: parsedData['sd'],
@@ -304,13 +321,13 @@ ref.on("value", function(snapshot) {
             fillLatestValues(1);
             madeWaterphChart.data.datasets[0].data = parsedData['pH'];
             madeWaterTempChart.data.datasets[0].data = parsedData['temp'];
-            madeWaterNoiseChart.data.datasets[0].data = parsedData['noise'];
-            madeWaterAirChart1.data.datasets[0].data = parsedData['co'];
-            madeWaterAirChart1.data.datasets[1].data = parsedData['nh'];
-            madeWaterAirChart1.data.datasets[0].data = parsedData['sox'];
-            madeWaterAirChart1.data.datasets[1].data = parsedData['nox'];
-            madeWaterAirChart1.data.datasets[0].data = parsedData['sd'];
-            madeWaterAirChart1.data.datasets[1].data = parsedData['voc'];
+            madeNoiseChart.data.datasets[0].data = parsedData['noise'];
+            madeAirChart1.data.datasets[0].data = parsedData['co'];
+            madeAirChart1.data.datasets[1].data = parsedData['nh'];
+            madeAirChart2.data.datasets[0].data = parsedData['sox'];
+            madeAirChart2.data.datasets[1].data = parsedData['nox'];
+            madeAirChart3.data.datasets[0].data = parsedData['sd'];
+            madeAirChart3.data.datasets[1].data = parsedData['voc'];
         })
     }, 2000);
 
