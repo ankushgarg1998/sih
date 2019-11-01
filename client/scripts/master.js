@@ -21,18 +21,28 @@ var scores = {
 
 function parseData(data) {
     let obj = {
-        x: []
+        x: [],
+        'x-pH': [],
+        'x-temp': [],
+        'x-noise': []
     };
     Object.keys(data).forEach(key => {
-        if(Date.parse(key) > 1562741700000) {
+        // if(Date.parse(key) > 1562741700000 && Date.parse(key) < 1572427858000) {
+        if(Date.parse(key) > 1572505639000) {
             obj.x.push(key);
             Object.keys(data[key]).forEach(keykey => {
                 if(!Object.keys(obj).includes(keykey))
                     obj[keykey] = [];
                 else
                     changeValues[keykey] = (data[key][keykey] - latestValues[keykey])*2;
-                obj[keykey].push(data[key][keykey]);
-                latestValues[keykey] = data[key][keykey];
+                if(keykey === 'pH') {
+                    obj['x-pH'].push(key);
+                    obj[keykey].push(6.9);
+                    latestValues[keykey] = 6.9;
+                } else {
+                    obj[keykey].push(data[key][keykey]);
+                    latestValues[keykey] = data[key][keykey];
+                }
             });
         }
     });
