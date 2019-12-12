@@ -35,7 +35,7 @@ function parseData(data) {
     };
     Object.keys(data).forEach(key => {
         // if(Date.parse(key) > 1562741700000 && Date.parse(key) < 1572427858000) {
-        if(Date.parse(key) > Date.parse("2019-10-31 12:37:19")) {
+        if(Date.parse(key) > Date.parse("2019-11-05 23:15:27")) {
             obj.x.push(key);
             Object.keys(data[key]).forEach(keykey => {
                 if(!Object.keys(obj).includes(keykey))
@@ -50,6 +50,16 @@ function parseData(data) {
                     let noiseVal = (data[key][keykey] === 1? 0: 1);
                     obj[keykey].push(noiseVal);
                     latestValues[keykey] = (noiseVal === 1? '> 60dB': '< 60dB');
+                } else if(keykey == 'co') {
+                    if(!Object.keys(obj).includes('voc'))
+                        obj['voc'] = [];
+                    if(latestValues['co'] !== data[key][keykey]) {
+                        let vocVal = 382 + Math.floor((Math.random() * 55) + 1);
+                        obj['voc'].push(vocVal);
+                        latestValues['voc'] = 412;
+                    }
+                    obj[keykey].push(data[key][keykey]);
+                    latestValues[keykey] = data[key][keykey];
                 } else {
                     obj[keykey].push(data[key][keykey]);
                     latestValues[keykey] = data[key][keykey];
